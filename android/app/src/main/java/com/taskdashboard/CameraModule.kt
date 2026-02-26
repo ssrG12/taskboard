@@ -63,7 +63,6 @@ class CameraModule(reactContext: ReactApplicationContext) :
         }
 
         try {
-            // Crear archivo para la foto
             val photoFile = createImageFile()
             photoUri =
                     FileProvider.getUriForFile(
@@ -72,7 +71,6 @@ class CameraModule(reactContext: ReactApplicationContext) :
                             photoFile
                     )
 
-            // Lanzar cámara
             val intent =
                     Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
                         putExtra(MediaStore.EXTRA_OUTPUT, photoUri)

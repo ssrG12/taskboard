@@ -1,8 +1,8 @@
-import React from 'react';
-import { StatusBar } from 'react-native';
-import { Provider } from 'react-redux';
-import { AppNavigator } from './src/navigation/AppNavigator';
-import { store } from './src/store';
+import React from 'react'
+import { store } from './src/store'
+import { Provider } from 'react-redux'
+import { StatusBar } from 'react-native'
+import { AppNavigator } from './src/navigation/AppNavigator'
 
 function App(): React.JSX.Element {
   return (
@@ -10,7 +10,7 @@ function App(): React.JSX.Element {
       <StatusBar barStyle="light-content" backgroundColor="#007AFF" />
       <AppNavigator />
     </Provider>
-  );
+  )
 }
 
-export default App;
+export default App

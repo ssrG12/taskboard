@@ -1,12 +1,11 @@
 #import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_MODULE(CameraModule, NSObject)
+@interface RCT_EXTERN_MODULE (CameraModule, NSObject)
 
-RCT_EXTERN_METHOD(takePicture:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXTERN_METHOD(takePicture : (RCTPromiseResolveBlock)
+                      resolve rejecter : (RCTPromiseRejectBlock)reject)
 
-+ (BOOL)requiresMainQueueSetup
-{
++ (BOOL)requiresMainQueueSetup {
   return YES;
 }
 

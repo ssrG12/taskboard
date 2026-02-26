@@ -6,16 +6,14 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.uimanager.ViewManager
 
 class AvatarViewPackage : ReactPackage {
-    
+
     override fun createViewManagers(
-        reactContext: ReactApplicationContext
+            reactContext: ReactApplicationContext
     ): List<ViewManager<*, *>> {
         return listOf(AvatarViewManager())
     }
-    
-    override fun createNativeModules(
-        reactContext: ReactApplicationContext
-    ): List<NativeModule> {
+
+    override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
         return emptyList()
     }
 }

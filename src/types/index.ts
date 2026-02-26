@@ -1,17 +1,17 @@
 export interface Task {
-  id: number;
-  todo: string;
-  completed: boolean;
-  userId: number;
-  attachmentUri?: string;  // ⬅️ NUEVO
+  id: number
+  todo: string
+  userId: number
+  completed: boolean
+  attachmentUri?: string
 }
 
-export type FilterType = 'all' | 'completed' | 'pending';
+export type FilterType = 'all' | 'completed' | 'pending'
 
-export interface CameraResult {  // ⬅️ NUEVO
-  uri: string;
-  fileName?: string;
-  width?: number;
-  height?: number;
-  size?: number;
+export interface CameraResult {
+  uri: string
+  size?: number
+  width?: number
+  height?: number
+  fileName?: string
 }

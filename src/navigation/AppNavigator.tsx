@@ -1,34 +1,26 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { DashboardScreen } from '../screens/DashboardScreen';
+import React from 'react'
+import { DashboardScreen } from '../screens/DashboardScreen'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 export type RootStackParamList = {
-  Dashboard: undefined;
-};
+  Dashboard: undefined
+}
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>()
 
 export const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Dashboard"
+        initialRouteName='Dashboard'
         screenOptions={{
-          headerStyle: {
-            backgroundColor: '#007AFF',
-          },
           headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
+          headerTitleStyle: { fontWeight: 'bold' },
+          headerStyle: { backgroundColor: '#007AFF' },
         }}>
-        <Stack.Screen
-          name="Dashboard"
-          component={DashboardScreen}
-          options={{ title: 'Mis Tareas' }}
-        />
+        <Stack.Screen name='Dashboard' component={DashboardScreen} options={{ title: 'Mis Tareas' }} />
       </Stack.Navigator>
     </NavigationContainer>
-  );
-};
+  )
+}
